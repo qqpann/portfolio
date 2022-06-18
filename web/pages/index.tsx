@@ -14,12 +14,13 @@ export default Index
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts<Post>([
-    'title',
-    'date',
     'slug',
-    'author',
-    'coverImage',
+    'title',
     'excerpt',
+    'date',
+    'ogImage',
+    'coverImage',
+    'content',
   ])
 
   return { props: { allPosts } }
