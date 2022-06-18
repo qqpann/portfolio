@@ -1,3 +1,7 @@
 export const SelfIntroduction = () => {
-  return <>Qiushi Pan</>
+  return (
+    <div>
+      <span className="text-lg">Qiushi Pan</span>
+    </div>
+  )
 }
