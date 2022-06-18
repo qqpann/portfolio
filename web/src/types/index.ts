@@ -1,11 +1,14 @@
 export type Post = {
+  // Slug from file name
   slug: string
+
+  // Meta info
   title: string
-  date: string
-  coverImage: string
   excerpt: string
-  ogImage: {
-    url: string
-  }
+  date: string
+  ogImage: string
+  coverImage: string
+
+  // Markdown content
   content: string
 }
