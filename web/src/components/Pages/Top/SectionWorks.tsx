@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { WorksCard } from '~/components/WorksCard'
 import { Post } from '~/types'
 
 interface Props {
@@ -12,7 +13,9 @@ export const Works = ({ posts }: Props) => {
       {posts.length > 0 &&
         posts.map((post) => (
           <Link href={`/works/${post.slug}`} key={post.slug}>
-            <a>{post.slug}</a>
+            <a>
+              <WorksCard post={post} />
+            </a>
           </Link>
         ))}
     </>
