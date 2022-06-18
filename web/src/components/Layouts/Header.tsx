@@ -33,13 +33,11 @@ export const Header = () => {
         </div>
         <Popover.Group as="nav" className="hidden md:flex space-x-10">
           {navItems.map((item) => (
-            <a
-              href={item.href}
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-              key={item.name}
-            >
-              {item.name}
-            </a>
+            <Link href={item.href} key={item.name}>
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                {item.name}
+              </a>
+            </Link>
           ))}
         </Popover.Group>
       </div>
@@ -78,13 +76,11 @@ export const Header = () => {
             <div className="py-6 px-5">
               <div className="grid grid-cols-2 gap-4">
                 {navItems.map((item) => (
-                  <a
-                    href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    key={item.name}
-                  >
-                    {item.name}
-                  </a>
+                  <Link href={item.href} key={item.name}>
+                    <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                      {item.name}
+                    </a>
+                  </Link>
                 ))}
               </div>
             </div>
