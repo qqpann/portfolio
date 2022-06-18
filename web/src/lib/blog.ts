@@ -35,7 +35,7 @@ export const getPostBySlug = <T>(slug: string, fields: string[] = []): T => {
     }
   })
 
-  return items as T
+  return items as unknown as T
 }
 
 export function getAllPosts<T extends { date: string }>(
