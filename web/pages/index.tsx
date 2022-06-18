@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { getAllPosts } from '../src/lib/blog'
+import { getAllPosts } from '~/lib/blog'
 
 type Post = {
   slug: string
