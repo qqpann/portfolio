@@ -2,8 +2,8 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import { getPostBySlug, getAllPosts } from '../../src/lib/blog'
-import markdownToHtml from '../../src/lib/markdownToHtml'
+import { getPostBySlug, getAllPosts } from '~/lib/blog'
+import markdownToHtml from '~/lib/markdownToHtml'
 
 type PostType = {
   slug: string

@@ -25,5 +25,10 @@
         "newlines-between": "always"
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": { "project": "web" }
+    }
   }
 }
