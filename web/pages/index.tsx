@@ -1,10 +1,7 @@
 import Link from 'next/link'
 
 import { getAllPosts } from '~/lib/blog'
-
-type Post = {
-  slug: string
-}
+import { Post } from '~/types'
 
 type Props = {
   allPosts: Post[]
@@ -27,7 +24,7 @@ const Index = ({ allPosts }: Props) => {
 export default Index
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
+  const allPosts = getAllPosts<Post>([
     'title',
     'date',
     'slug',
@@ -36,7 +33,5 @@ export const getStaticProps = async () => {
     'excerpt',
   ])
 
-  return {
-    props: { allPosts },
-  }
+  return { props: { allPosts } }
 }

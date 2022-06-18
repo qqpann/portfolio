@@ -4,21 +4,10 @@ import { useRouter } from 'next/router'
 
 import { getPostBySlug, getAllPosts } from '~/lib/blog'
 import markdownToHtml from '~/lib/markdownToHtml'
-
-type PostType = {
-  slug: string
-  title: string
-  date: string
-  coverImage: string
-  excerpt: string
-  ogImage: {
-    url: string
-  }
-  content: string
-}
+import { Post } from '~/types'
 
 type Props = {
-  post: PostType
+  post: Post
 }
 
 const Post = ({ post }: Props) => {
@@ -53,7 +42,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+  const post = getPostBySlug<Post>(params.slug, [
     'title',
     'date',
     'slug',
@@ -75,7 +64,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts<Post>(['slug'])
 
   return {
     paths: posts.map((post) => {
