@@ -21,15 +21,16 @@ export const Works = ({ posts }: Props) => {
             My works are here.
           </p>
         </div>
-        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none"></div>
-        {posts.length > 0 &&
-          posts.map((post) => (
-            <Link href={`/works/${post.slug}`} key={post.slug}>
-              <a>
-                <WorksCard post={post} />
-              </a>
-            </Link>
-          ))}
+        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+          {posts.length > 0 &&
+            posts.map((post) => (
+              <Link href={`/works/${post.slug}`} key={post.slug}>
+                <a>
+                  <WorksCard post={post} />
+                </a>
+              </Link>
+            ))}
+        </div>
       </div>
     </div>
   )
