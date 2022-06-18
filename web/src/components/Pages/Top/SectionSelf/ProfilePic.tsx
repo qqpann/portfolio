@@ -1,11 +1,10 @@
 import Image from 'next/image'
 
+import { me } from '~/variables/me'
+
 const person = {
-  name: 'Qiushi Pan',
+  ...me,
   role: 'Coder, Gamer, Researcher',
-  imageUrl: '/assets/ProfilePic_Nikko.jpg',
-  twitterUrl: '#',
-  linkedinUrl: '#',
 }
 export const ProfilePic = () => {
   return (
