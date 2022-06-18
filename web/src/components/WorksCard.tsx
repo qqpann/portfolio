@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import { Post } from '~/types'
 
 const __post = {
@@ -11,12 +13,6 @@ const __post = {
   imageUrl:
     'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
   readingTime: '6 min',
-  author: {
-    name: 'Roel Aufderehar',
-    href: '#',
-    imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
 }
 
 type Props = {
@@ -26,11 +22,13 @@ export const WorksCard = ({ post }: Props) => {
   return (
     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
       <div className="flex-shrink-0">
-        <img
-          className="h-48 w-full object-cover"
-          src={__post.imageUrl}
-          alt=""
-        />
+        <div className="h-48 w-full object-cover relative">
+          <Image
+            src={post.coverImage ?? '/assets/dinosaur.jpg'}
+            layout="fill"
+            alt=""
+          />
+        </div>
       </div>
       <div className="flex-1 bg-white p-6 flex flex-col justify-between">
         <div className="flex-1">
