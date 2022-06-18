@@ -2,6 +2,7 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
+import { Layout } from '~/components/Layouts/Layout'
 import { Post } from '~/types'
 
 type Props = {
@@ -9,23 +10,16 @@ type Props = {
 }
 export const WorksPage = ({ post }: Props) => {
   const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
-  }
+  if (!router.isFallback && !post?.slug) return <ErrorPage statusCode={404} />
+  if (router.isFallback) return <>Loading...</>
   return (
-    <>
-      {router.isFallback ? (
-        <>Loading…</>
-      ) : (
-        <>
-          <article className="mb-32">
-            <Head>
-              <title>{post.title} | Next.js Blog Example with</title>
-            </Head>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          </article>
-        </>
-      )}
-    </>
+    <Layout>
+      <article className="mb-32">
+        <Head>
+          <title>{post.title} | Next.js Blog Example with</title>
+        </Head>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </article>
+    </Layout>
   )
 }
