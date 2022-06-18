@@ -9,7 +9,6 @@ type Props = {
 const Page = ({ post }: Props) => {
   return <WorksPage post={post} />
 }
-
 export default Page
 
 type Params = {
@@ -17,7 +16,6 @@ type Params = {
     slug: string
   }
 }
-
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug<Post>(params.slug, [
     'title',
