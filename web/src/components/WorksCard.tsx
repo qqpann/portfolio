@@ -37,10 +37,7 @@ export const WorksCard = ({ post }: Props) => {
           </p>
           <div className="block mt-2">
             <h3 className="text-xl font-semibold text-gray-900">{post.slug}</h3>
-            <div
-              className="mt-3 text-base text-gray-500"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
+            <div className="mt-3 text-base text-gray-500">{post.excerpt}</div>
           </div>
         </div>
         <div className="mt-6 flex items-center">

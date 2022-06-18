@@ -6,6 +6,6 @@ ogImage: "/assets/works/2017-hugo-primer.png"
 coverImage: "/assets/works/2017-hugo-primer.png"
 ---
 
-# Hugo-Primer
+## Hugo-Primer
 
 Hugo theme based on Primer css.
