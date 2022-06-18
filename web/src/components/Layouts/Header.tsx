@@ -4,6 +4,10 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
+const navItems = [
+  { name: 'Edit on GitHub', href: 'https://github.com/qqpann/portfolio' },
+]
+
 export const Header = () => {
   return (
     <Popover className="relative bg-white">
@@ -25,18 +29,15 @@ export const Header = () => {
           </Popover.Button>
         </div>
         <Popover.Group as="nav" className="hidden md:flex space-x-10">
-          <a
-            href="#"
-            className="text-base font-medium text-gray-500 hover:text-gray-900"
-          >
-            Pricing
-          </a>
-          <a
-            href="#"
-            className="text-base font-medium text-gray-500 hover:text-gray-900"
-          >
-            Docs
-          </a>
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              className="text-base font-medium text-gray-500 hover:text-gray-900"
+              key={item.name}
+            >
+              {item.name}
+            </a>
+          ))}
         </Popover.Group>
       </div>
 
@@ -73,19 +74,15 @@ export const Header = () => {
             </div>
             <div className="py-6 px-5">
               <div className="grid grid-cols-2 gap-4">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Pricing
-                </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Docs
-                </a>
+                {navItems.map((item) => (
+                  <a
+                    href={item.href}
+                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    key={item.name}
+                  >
+                    {item.name}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
