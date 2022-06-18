@@ -1,5 +1,4 @@
-import Link from 'next/link'
-
+import { Top } from '~/components/Pages/Top'
 import { getAllPosts } from '~/lib/blog'
 import { Post } from '~/types'
 
@@ -8,17 +7,7 @@ type Props = {
 }
 
 const Index = ({ allPosts }: Props) => {
-  return (
-    <div>
-      <h1>Works</h1>
-      {allPosts.length > 0 &&
-        allPosts.map((post) => (
-          <Link href={`/works/${post.slug}`} key={post.slug}>
-            <a>{post.slug}</a>
-          </Link>
-        ))}
-    </div>
-  )
+  return <Top posts={allPosts} />
 }
 
 export default Index

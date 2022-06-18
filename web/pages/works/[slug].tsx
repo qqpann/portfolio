@@ -1,7 +1,4 @@
-import ErrorPage from 'next/error'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-
+import { WorksPage } from '~/components/Pages/WorksPage'
 import { getPostBySlug, getAllPosts } from '~/lib/blog'
 import markdownToHtml from '~/lib/markdownToHtml'
 import { Post } from '~/types'
@@ -9,31 +6,11 @@ import { Post } from '~/types'
 type Props = {
   post: Post
 }
-
-const Post = ({ post }: Props) => {
-  const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
-  }
-  return (
-    <>
-      {router.isFallback ? (
-        <>Loading…</>
-      ) : (
-        <>
-          <article className="mb-32">
-            <Head>
-              <title>{post.title} | Next.js Blog Example with</title>
-            </Head>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          </article>
-        </>
-      )}
-    </>
-  )
+const Page = ({ post }: Props) => {
+  return <WorksPage post={post} />
 }
 
-export default Post
+export default Page
 
 type Params = {
   params: {
