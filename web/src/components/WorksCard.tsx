@@ -39,7 +39,7 @@ export const WorksCard = ({ post }: Props) => {
           </p>
           <a href={__post.href} className="block mt-2">
             <p className="text-xl font-semibold text-gray-900">{post.slug}</p>
-            <p className="mt-3 text-base text-gray-500">{`${post.content}`}</p>
+            <div className="mt-3 text-base text-gray-500">{`${post.content}`}</div>
           </a>
         </div>
         <div className="mt-6 flex items-center">

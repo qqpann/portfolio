@@ -9,6 +9,7 @@ export const Header = () => {
     <Popover className="relative bg-white">
       <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
+          <span className="sr-only">Top</span>
           <a href="#">
             <img
               className="h-8 w-auto sm:h-10"
