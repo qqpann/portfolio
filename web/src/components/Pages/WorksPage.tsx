@@ -73,13 +73,11 @@ export const WorksPage = ({ post }: Props) => {
                 <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
                   <figure>
                     <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                      <div className="rounded-lg shadow-lg object-cover object-center">
+                      <div className="w-full h-48 sm:h-72 lg:h-96 rounded-lg shadow-lg object-cover object-center relative">
                         <Image
                           src={post.coverImage ?? '/assets/404_dinosaur.jpg'}
                           alt=""
-                          width="100%"
-                          height="100%"
-                          layout="responsive"
+                          layout="fill"
                           objectFit="contain"
                         />
                       </div>

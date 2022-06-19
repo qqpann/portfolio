@@ -25,9 +25,7 @@ export const WorksCard = ({ post }: Props) => {
         <div className="h-48 w-full object-cover relative">
           <Image
             src={post.coverImage ?? '/assets/404_dinosaur.jpg'}
-            width="100%"
-            height="100%"
-            layout="responsive"
+            layout="fill"
             objectFit="contain"
             alt=""
           />
