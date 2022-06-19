@@ -12,7 +12,6 @@ type Props = {
 }
 export const WorksPage = ({ post }: Props) => {
   const router = useRouter()
-  console.log(post)
   if (!router.isFallback && !post?.slug) return <ErrorPage statusCode={404} />
   if (router.isFallback) return <>Loading...</>
   return (
