@@ -77,8 +77,10 @@ export const WorksPage = ({ post }: Props) => {
                         <Image
                           src={post.coverImage ?? '/assets/404_dinosaur.jpg'}
                           alt=""
-                          width={1184}
-                          height={1376}
+                          width="100%"
+                          height="100%"
+                          layout="responsive"
+                          objectFit="contain"
                         />
                       </div>
                     </div>
