@@ -75,7 +75,7 @@ export const WorksPage = ({ post }: Props) => {
                     <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                       <div className="rounded-lg shadow-lg object-cover object-center">
                         <Image
-                          src={post.coverImage ?? '/assets/dinosaur.jpg'}
+                          src={post.coverImage ?? '/assets/404_dinosaur.jpg'}
                           alt=""
                           width={1184}
                           height={1376}

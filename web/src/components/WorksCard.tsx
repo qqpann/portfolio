@@ -24,7 +24,7 @@ export const WorksCard = ({ post }: Props) => {
       <div className="flex-shrink-0">
         <div className="h-48 w-full object-cover relative">
           <Image
-            src={post.coverImage ?? '/assets/dinosaur.jpg'}
+            src={post.coverImage ?? '/assets/404_dinosaur.jpg'}
             layout="fill"
             alt=""
           />
