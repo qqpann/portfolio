@@ -1,4 +1,10 @@
-# Gijirokukun
+---
+title: "Gijirokukun"
+excerpt: "Transcription app."
+date: "2020-03-16T05:35:07.322Z"
+---
+
+## Gijirokukun
 
 <https://gijirokukun.com/>
 

@@ -12,7 +12,7 @@ const __post = {
   datetime: '2020-03-16',
   imageUrl:
     'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-  readingTime: '6 min',
+  readingTime: '1 min',
 }
 
 type Props = {
@@ -36,7 +36,9 @@ export const WorksCard = ({ post }: Props) => {
             {__post.category.name}
           </p>
           <div className="block mt-2">
-            <h3 className="text-xl font-semibold text-gray-900">{post.slug}</h3>
+            <h3 className="text-xl font-semibold text-gray-900">
+              {post.title ?? post.slug}
+            </h3>
             <div className="mt-3 text-base text-gray-500">{post.excerpt}</div>
           </div>
         </div>
