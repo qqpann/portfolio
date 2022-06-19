@@ -1,4 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
+import Image from 'next/image'
 import Link from 'next/link'
 import { Fragment } from 'react'
 
@@ -17,11 +18,14 @@ export const Header = () => {
           <span className="sr-only">Top</span>
           <Link href="/">
             <a>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
-              />
+              <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border-solid border-2 border-orange-200 relative">
+                <Image
+                  className="rounded-full"
+                  src="/assets/profile_taka.png"
+                  alt=""
+                  layout="fill"
+                />
+              </div>
             </a>
           </Link>
         </div>
@@ -58,11 +62,12 @@ export const Header = () => {
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
-                <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
+                <div className="h-8 w-8 rounded-full border-solid border-2 border-orange-200 relative">
+                  <Image
+                    className="rounded-full"
+                    src="/assets/profile_taka.png"
+                    alt=""
+                    layout="fill"
                   />
                 </div>
                 <div className="-mr-2">
