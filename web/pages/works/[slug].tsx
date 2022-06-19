@@ -1,13 +1,26 @@
+import Head from 'next/head'
+
 import { WorksPage } from '~/components/Pages/WorksPage'
 import { getPostBySlug, getAllPosts } from '~/lib/blog'
 import markdownToHtml from '~/lib/markdownToHtml'
 import { Post } from '~/types'
+import { me } from '~/variables/me'
 
 type Props = {
   post: Post
 }
 const Page = ({ post }: Props) => {
-  return <WorksPage post={post} />
+  return (
+    <>
+      <Head>
+        <title>
+          {post.title ?? post.slug} | Works - {me.name}
+        </title>
+        <meta name="description" content={post.excerpt} />
+      </Head>
+      <WorksPage post={post} />
+    </>
+  )
 }
 export default Page
 

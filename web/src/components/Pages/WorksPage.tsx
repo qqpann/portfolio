@@ -1,5 +1,4 @@
 import ErrorPage from 'next/error'
-import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
@@ -18,9 +17,6 @@ export const WorksPage = ({ post }: Props) => {
   if (router.isFallback) return <>Loading...</>
   return (
     <Layout>
-      <Head>
-        <title>{post.title} | Works</title>
-      </Head>
       <article className="mb-32">
         <div className="bg-white overflow-hidden">
           <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
