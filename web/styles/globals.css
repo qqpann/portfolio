@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-800;
+    @apply dark:text-gray-400;
+  }
+}
+
+@layer components {
+  .text-basic-color-100 {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+  .text-basic-color-200 {
+    @apply text-gray-900 dark:text-gray-200;
+  }
+}

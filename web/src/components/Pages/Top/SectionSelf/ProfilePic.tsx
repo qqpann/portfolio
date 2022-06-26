@@ -32,7 +32,7 @@ export const ProfilePic = () => {
           />
         </div>
         <div className="space-y-2">
-          <div className="text-lg leading-6 font-medium space-y-1">
+          <div className="text-lg leading-6 font-medium space-y-1 text-basic-color-200">
             <h3>{person.name}</h3>
             <p className="text-indigo-600">{person.role}</p>
           </div>
@@ -41,7 +41,7 @@ export const ProfilePic = () => {
               <li key={social.name}>
                 <a
                   href={social.href}
-                  className="text-gray-400 hover:text-gray-500"
+                  className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
                 >
                   <span className="sr-only">{social.name}</span>
                   <social.icon className="w-5 h-5" aria-hidden="true" />

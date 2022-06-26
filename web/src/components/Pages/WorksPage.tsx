@@ -17,15 +17,15 @@ export const WorksPage = ({ post }: Props) => {
   return (
     <Layout>
       <article className="mb-32">
-        <div className="bg-white overflow-hidden">
+        <div className="overflow-hidden">
           <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
+            <div className="hidden lg:block bg-gray-50 dark:bg-gray-400/10 absolute top-0 bottom-0 left-3/4 w-screen" />
             <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
               <div>
                 <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
                   Works
                 </h2>
-                <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-basic-color-200 sm:text-4xl">
                   {post.title}
                 </h3>
               </div>
@@ -89,9 +89,9 @@ export const WorksPage = ({ post }: Props) => {
               </div>
               <div className="mt-8 lg:mt-0">
                 <div className="text-base max-w-prose mx-auto lg:max-w-none">
-                  <p className="text-lg text-gray-500">{post.excerpt}</p>
+                  <p className="text-lg text-basic-color-100">{post.excerpt}</p>
                   <div
-                    className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1"
+                    className="mt-5 prose prose-indigo text-basic-color-100 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1"
                     dangerouslySetInnerHTML={{ __html: post.content }}
                   />
                 </div>

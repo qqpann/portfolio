@@ -27,14 +27,14 @@ const navigation = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -42,7 +42,7 @@ export const Footer = () => {
           ))}
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base text-gray-500">
+          <p className="text-center text-base text-basic-color-100">
             &copy; 2022 Qiushi Pan
           </p>
         </div>

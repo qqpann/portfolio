@@ -17,25 +17,25 @@ const intro: { title: string; content: string }[] = [
 
 export const SelfIntroduction = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-inherit">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="lg:grid lg:grid-cols-3 lg:gap-8">
           <div>
-            <div className="mt-4 text-lg text-gray-500">
+            <div className="mt-4 text-lg">
               <ProfilePic />
             </div>
           </div>
           <div className="mt-12 lg:mt-0 lg:col-span-2">
-            <h2 className="text-3xl font-extrabold text-gray-900">
+            <h2 className="text-3xl font-extrabold text-basic-color-200">
               Bibliography
             </h2>
             <dl className="space-y-12">
               {intro.map((faq) => (
                 <div key={faq.title}>
-                  <dt className="text-lg leading-6 font-medium text-gray-900">
+                  <dt className="text-lg leading-6 font-medium text-basic-color-200">
                     {faq.title}
                   </dt>
-                  <dd className="mt-2 text-base text-gray-500">
+                  <dd className="mt-2 text-base text-basic-color-100">
                     {faq.content}
                   </dd>
                 </div>
