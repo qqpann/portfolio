@@ -1,13 +1,19 @@
+import { useEffect, useState } from 'react'
+
 import { MoonIcon, SunIcon } from '@heroicons/react/outline'
 import { useTheme } from 'next-themes'
 
 export const DarkModeSwitch = () => {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
+  const [loading, setLoading] = useState<boolean>(true)
+  useEffect(() => {
+    setLoading(false)
+  }, [])
   const toggle = () => {
-    if (theme === 'system' || theme === 'light') {
-      setTheme('dark')
-    } else {
+    if (resolvedTheme === 'dark') {
       setTheme('light')
+    } else {
+      setTheme('dark')
     }
   }
 
@@ -18,7 +24,9 @@ export const DarkModeSwitch = () => {
         onClick={toggle}
         aria-label="Toggle dark mode"
       >
-        {theme === 'dark' ? (
+        {loading ? (
+          <div className="animate-pulse w-6 h-6 rounded-full bg-slate-400/30"></div>
+        ) : resolvedTheme === 'dark' ? (
           <SunIcon className="h-6 w-6" aria-hidden="true" />
         ) : (
           <MoonIcon className="h-6 w-6" aria-hidden="true" />
