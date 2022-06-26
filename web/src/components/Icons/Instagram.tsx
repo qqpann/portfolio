@@ -1,4 +1,4 @@
-export const Instagram = (props: any) => (
+export const Instagram: React.FC<{ className?: string }> = (props) => (
   <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
     <path
       fillRule="evenodd"

@@ -1,4 +1,4 @@
-export const Linkedin = (props: any) => (
+export const Linkedin: React.FC<{ className?: string }> = (props) => (
   <svg fill="currentColor" viewBox="0 0 20 20" {...props}>
     <path
       fillRule="evenodd"
