@@ -1,8 +1,5 @@
-import { useEffect, useState } from 'react'
-
 import { MoonIcon, SunIcon } from '@heroicons/react/outline'
 import { useTheme } from 'next-themes'
-import { useDidMount, useToggle } from 'rooks'
 
 export const DarkModeSwitch = () => {
   const { theme, setTheme } = useTheme()
