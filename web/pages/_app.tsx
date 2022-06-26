@@ -1,11 +1,13 @@
 import type { AppProps } from 'next/app'
 import Script from 'next/script'
 
+import { ThemeProvider } from 'next-themes'
+
 import 'styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider defaultTheme="system" attribute="class">
       <Component {...pageProps} />
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <Script
@@ -25,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             `,
         }}
       />
-    </>
+    </ThemeProvider>
   )
 }
 

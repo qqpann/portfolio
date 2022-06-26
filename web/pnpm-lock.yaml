@@ -17,6 +17,7 @@ specifiers:
   eslint-plugin-import: ^2.26.0
   gray-matter: ^4.0.3
   next: 12.1.6
+  next-themes: ^0.2.0
   npm-run-all: ^4.1.5
   postcss: ^8.4.14
   prettier: ^2.7.1
@@ -29,6 +30,7 @@ specifiers:
 
 dependencies:
   next: 12.1.6_biqbaboplfbrettd7655fr4n2y
+  next-themes: 0.2.0_2nrpme5s5xmpdgccbbbdwhosda
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -2101,6 +2103,18 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
+
+  /next-themes/0.2.0_2nrpme5s5xmpdgccbbbdwhosda:
+    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 12.1.6_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /next/12.1.6_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-cebwKxL3/DhNKfg9tPZDQmbRKjueqykHHbgaoG4VBRH3AHQJ2HO0dbKFiS1hPhe1/qgc2d/hFeadsbPicmLD+A==}

@@ -6,6 +6,8 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
+import { DarkModeSwitch } from '~/components/DarkModeSwitch/DarkModeSwitch'
+
 const navItems = [
   { name: 'Fork on GitHub', href: 'https://github.com/qqpann/portfolio' },
 ]
@@ -36,6 +38,7 @@ export const Header = () => {
           </Popover.Button>
         </div>
         <Popover.Group as="nav" className="hidden md:flex space-x-10">
+          <DarkModeSwitch />
           {navItems.map((item) => (
             <Link href={item.href} key={item.name}>
               <a className="text-base font-medium text-basic-color-100 hover:text-gray-900 dark:hover:text-gray-300">
@@ -80,6 +83,7 @@ export const Header = () => {
             </div>
             <div className="py-6 px-5">
               <div className="grid grid-cols-2 gap-4">
+                <DarkModeSwitch />
                 {navItems.map((item) => (
                   <Link href={item.href} key={item.name}>
                     <a className="text-base font-medium text-basic-color-200 hover:text-gray-700">
