@@ -21,12 +21,14 @@ export const SelfIntroduction = () => {
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="lg:grid lg:grid-cols-3 lg:gap-8">
           <div>
-            <h2 className="text-3xl font-extrabold text-gray-900">About me</h2>
             <div className="mt-4 text-lg text-gray-500">
               <ProfilePic />
             </div>
           </div>
           <div className="mt-12 lg:mt-0 lg:col-span-2">
+            <h2 className="text-3xl font-extrabold text-gray-900">
+              Bibliography
+            </h2>
             <dl className="space-y-12">
               {intro.map((faq) => (
                 <div key={faq.title}>
