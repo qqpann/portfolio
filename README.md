@@ -21,8 +21,12 @@ pnpm install
 pnpm dev
 ```
 
-You can start dev server in the root directory.
+Install packages and you are good to go.
+
+You can also start the dev server from the root directory.
 
 ```sh
 make dev
 ```
+
+Happy hacking!
