@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@headlessui/react": "^1.6.4",
-    "@heroicons/react": "^1.0.6",
+    "@heroicons/react": "^2.0.10",
     "@types/gtag.js": "^0.0.10",
     "@types/node": "18.7.2",
     "@types/react": "18.0.17",
