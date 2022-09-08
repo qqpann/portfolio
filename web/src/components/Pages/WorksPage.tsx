@@ -2,7 +2,7 @@ import ErrorPage from 'next/error'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-import { CameraIcon } from '@heroicons/react/solid'
+import { CameraIcon } from '@heroicons/react/24/solid'
 
 import { Layout } from '~/components/Layouts/Layout'
 import { Post } from '~/types'
