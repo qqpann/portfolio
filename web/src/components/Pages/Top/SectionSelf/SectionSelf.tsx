@@ -27,7 +27,7 @@ export const SelfIntroduction = () => {
           </div>
           <div className="mt-12 lg:mt-0 lg:col-span-2">
             <h2 className="text-3xl font-extrabold text-basic-color-200">
-              Bibliography
+              Biography
             </h2>
             <dl className="space-y-12">
               {intro.map((faq) => (
