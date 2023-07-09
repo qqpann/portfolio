@@ -8,8 +8,8 @@
     "packages/*"
   ],
   "engines": {
-    "node": "^16",
-    "pnpm": "^7"
+    "node": "^18",
+    "pnpm": "^8"
   },
   "scripts": {
     "dev": "pnpm --prefix web dev",
