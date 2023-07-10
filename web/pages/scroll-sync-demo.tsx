@@ -53,7 +53,15 @@ export default function Demo() {
 
   return (
     <div className="">
-      <span className="absolute">{scrollLocation}</span>
+      <span className="absolute font-mono">
+        ScrollLocation: {scrollLocation}; Code:{' '}
+        <a
+          href="https://github.com/qqpann/portfolio/blob/main/web/pages/scroll-sync-demo.tsx"
+          target="_blank"
+        >
+          https://github.com/qqpann/portfolio/blob/main/web/pages/scroll-sync-demo.tsx
+        </a>
+      </span>
       <div>
         {seriesA.map((p, i) => (
           <div
